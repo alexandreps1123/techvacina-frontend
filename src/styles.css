@@ -6,5 +6,7 @@ body, html{
 
     font-family: 'Montserrat';
     text-transform: capitalize;
-    
+    display: flex;
+    overflow-y: hidden;
+    overscroll-behavior-y: none;
 }

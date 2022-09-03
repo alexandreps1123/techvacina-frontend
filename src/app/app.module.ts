@@ -8,9 +8,11 @@ import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 import { HeaderComponent } from './header/header.component';
 import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
+import { ButtonOptionsComponent } from './button-options/button-options.component';
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 
 @NgModule({
-  declarations: [AppComponent, PostoSaudeComponent, PaginaLoginComponent, HeaderComponent, InputComponent, ButtonComponent],
+  declarations: [AppComponent, PostoSaudeComponent, PaginaLoginComponent, HeaderComponent, InputComponent, ButtonComponent, ButtonOptionsComponent, PaginaPrincipalComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
