@@ -1,0 +1,11 @@
+<section class="container">
+  <div class="card-body">
+    <form [formGroup]="novoUsuarioForm" (ngSubmit)="cadastrar()">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" formControlName="nome">
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </div>
+</section>
