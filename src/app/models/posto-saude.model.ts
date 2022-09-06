@@ -1,1 +1,7 @@
-// adicionar a classe model de posto-saude
+import { Endereco } from "./endereco.model";
+
+export interface PostoSaude {
+  id?: number;
+  nome: string;
+	endereco: Endereco;
+}
