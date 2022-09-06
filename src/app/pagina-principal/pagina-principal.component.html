@@ -1,26 +1,33 @@
-
 <div class="container">
+  <div class="pagina">
+    <div class="vertical-center">
+      <div class="botoesEImagem">
+        <img src="assets/paginaprincipal.png" alt="image">
+      </div>
 
-    <div class="pagina">
+      <div class="botoes">
+        <!-- lista de lembretes -->
+        <app-button-options [variavel]="'Alertas'" [routerLink]="['/alertas']" routerLinkActive="active">
+        </app-button-options>
 
-        <div class="botoesEImagem">
-            <!-- <img src="assets/img/pagina_principal.png" > -->
-        </div>
+        <!-- lista doenca com botao de notificacao/lembrete
+      comunicar com 'lembrete' -->
+        <app-button-options [variavel]="'Vacinas a tomar'" [routerLink]="['/proximas_vacinas']"
+          routerLinkActive="active">
+          Vacinas a tomar
+        </app-button-options>
 
-        <div class="botoes">
-            <app-button-options [variavel] = "'Alertas'" [routerLink]="[]"></app-button-options>
-            <app-button-options [variavel] = "'Vacinas a tomar'" [routerLink]="['/proximas_vacinas']" routerLinkActive="active">
-              Vacinas a tomar
-            </app-button-options>
-            <app-button-options [variavel] = "'Campanhas'"></app-button-options>
-            <app-button-options [variavel] = "'Mapa de Postos'"></app-button-options>
-        </div>
+        <!-- <app-button-options [variavel]="'Campanhas'"></app-button-options> -->
 
-        <div class="botoesEImagem">
-            <app-button [variavel] = "'Sair'"></app-button>
-        </div>
+        <!-- listar postos - ok -->
+        <app-button-options [variavel]="'Postos'" [routerLink]="['/postos']" routerLinkActive="active">
+        </app-button-options>
+      </div>
+
 
     </div>
+    <div class="vertical-left">
+      <app-button [variavel]="'Sair'" [routerLink]="['/']" routerLinkActive="active"></app-button>
+    </div>
+  </div>
 </div>
-
-
