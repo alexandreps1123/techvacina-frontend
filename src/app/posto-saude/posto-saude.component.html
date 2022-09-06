@@ -1,34 +1,37 @@
-<div *ngIf="listaPostoSaude.length > 0; else listaVazia">
-  <table class="table table-striped table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th class="col">Nome</th>
-        <th class="col">Bairro</th>
-        <th class="col">Cidade</th>
-        <th class="col">Estado</th>
-      </tr>
-    </thead>
+<section class="container">
+  <div *ngIf="listaPostoSaude.length > 0; else listaVazia">
+    <table class="table table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th class="col">Nome</th>
+          <th class="col">Bairro</th>
+          <th class="col">Cidade</th>
+          <th class="col">Estado</th>
+        </tr>
+      </thead>
 
-    <tbody class="table-striped">
-      <tr *ngFor="let posto of listaPostoSaude">
-        <td>
-          <a href="">
-            <span>{{ posto.nome }}</span>
-          </a>
-        </td>
-        <td>{{ posto.endereco.bairro }}</td>
-        <td>{{ posto.endereco.cidade }}</td>
-        <td>{{ posto.endereco.estado }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<ng-template #listaVazia>
-  <p class="lead espaco">Sem alertas de próximas vacinas, no momento.</p>
-</ng-template>
+      <tbody class="table-striped">
+        <tr *ngFor="let posto of listaPostoSaude">
+          <td>
+            <a href="">
+              <span>{{ posto.nome }}</span>
+            </a>
+          </td>
+          <td>{{ posto.endereco.bairro }}</td>
+          <td>{{ posto.endereco.cidade }}</td>
+          <td>{{ posto.endereco.estado }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #listaVazia>
+    <p class="lead espaco">Sem alertas de próximas vacinas, no momento.</p>
+  </ng-template>
 
-
-
+  <div class="vertical-left">
+    <app-button [variavel]="'Voltar'" [routerLink]="['/main']" routerLinkActive="active"></app-button>
+  </div>
+</section>
 <!-- <input type="text">
 
 <button>Salvar</button>
