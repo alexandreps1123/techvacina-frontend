@@ -1,14 +1,12 @@
-
-<app-header></app-header>
-
 <div class="container">
+  <form class="form">
+    <app-input [variavel]="'Nome'"></app-input>
+    <app-input [variavel]="'Senha'"></app-input>
 
-    <form class="form">
-        <app-input [variavel] = "'Nome'"></app-input>
-        <app-input [variavel] = "'Senha'"></app-input>
-
-        <app-button [variavel] = "'Entrar'"></app-button>
-
-    </form>
-    
+    <app-button
+      [variavel]="'Entrar'"
+      [routerLink]="['/main']"
+      routerLinkActive="active"
+    ></app-button>
+  </form>
 </div>

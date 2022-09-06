@@ -1,0 +1,26 @@
+<div *ngIf="listaLembretes.length > 0; else listaVazia">
+  <table class="table table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th class="col">Nome</th>
+        <th class="col">Doença</th>
+        <th class="col">Data próxima vacina</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-striped">
+      <tr *ngFor="let lembretes of listaLembretes">
+        <td>{{ lembretes.cliente.nome }}</td>
+        <td>
+          <a href="">
+            <span>{{ lembretes.doenca.nome }}</span>
+          </a>
+        </td>
+        <td>{{ lembretes.data | date: "dd/MM/yyyy" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #listaVazia>
+  <p class="lead espaco">Sem alertas de próximas vacinas, no momento.</p>
+</ng-template>

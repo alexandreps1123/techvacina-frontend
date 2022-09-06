@@ -13,8 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { InputComponent } from './input/input.component';
 import { PaginaLoginComponent } from './pagina-login/pagina-login.component';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
-import { VacinasFuturasComponent } from './vacinas-futuras/vacinas-futuras.component';
+import { DoencasComponent } from './doencas/doencas.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LembretesComponent } from './lembretes/lembretes.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonComponent,
     ButtonOptionsComponent,
     PaginaPrincipalComponent,
-    VacinasFuturasComponent
+    DoencasComponent,
+    LembretesComponent
   ],
   imports: [
     BrowserModule,
